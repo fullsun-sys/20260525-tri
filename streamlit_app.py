@@ -9,13 +9,14 @@ st.markdown(
     "학생이 직접 `a`와 `b`를 바꾸며 `y = ax + b` 그래프가 어떻게 변하는지 관찰할 수 있는 앱입니다."
 )
 
+n_points = 200
+
 with st.sidebar:
     st.header("변수 조절")
     a = st.slider("기울기 a", min_value=-5.0, max_value=5.0, value=1.0, step=0.1, format="%.1f")
     b = st.slider("절편 b", min_value=-10.0, max_value=10.0, value=0.0, step=0.5, format="%.1f")
     x_min = st.slider("x 최소값", min_value=-10, max_value=0, value=-5)
     x_max = st.slider("x 최대값", min_value=1, max_value=10, value=5)
-    n_points = st.slider("그래프 점 개수", min_value=100, max_value=400, value=200, step=20)
 
     st.divider()
     st.subheader("관찰 포인트")
